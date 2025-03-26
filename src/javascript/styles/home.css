@@ -1,0 +1,71 @@
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 91px);
+    position: relative;
+    padding: 0 8%;
+}
+
+#cta {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+}
+
+#cta .title {
+    font-size: 4rem;
+    color: var(--color-neutral-1);
+}
+
+#cta .title span {
+    color: var(--color-primary-6);
+}
+
+#cta_button a {
+    text-decoration: none;
+}
+
+#cta_button a:hover {
+    background-color: #929698;
+    text-decoration: none;
+}
+
+#banner {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    overflow: visible; /* Garante que a imagem apareça */
+}
+
+#banner img {
+    width: auto;
+    max-width: 100%; /* Para evitar cortes */
+    height: 400px;  /* Ajuste a altura conforme necessário */
+    animation: floating 4s ease-in-out infinite;
+}
+
+/* Animação de Flutuação */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.shape {
+    background-color: var(--color-primary-2);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40% 30% 0% 20%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+

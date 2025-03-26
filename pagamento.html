@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - TechFuture Summit 2025</title>
+    <link rel="stylesheet" href="pagar.css">
+    <link rel="stylesheet" href="global_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>💰 Valores dos Ingressos</h2>
+        <p>🎟 <b>Ingresso Online:</b> R$ 99,90</p>
+        <p>🎟 <b>Ingresso Presencial:</b> R$ 249,90</p>
+
+        <h2>💳 Formas de Pagamento:</h2>
+        <p>✔ PIX</p>
+        <p>✔ Cartão de Crédito</p>
+        <p>✔ Cartão de Débito</p>
+
+        <form id="paymentForm">
+            <input type="text" id="nome" placeholder="Nome no Cartão" required>
+            <input type="text" id="numeroCartao" placeholder="Número do Cartão" required>
+            <div class="input-group">
+                <input type="text" id="validade" placeholder="Validade (MM/AA)" required>
+                <input type="text" id="cvv" placeholder="CVV" required>
+            </div>
+            <button type="submit" id="pag">Finalizar Pagamento</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("paymentForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Pegando os valores dos inputs
+            let nome = document.getElementById("nome").value.trim();
+            let numeroCartao = document.getElementById("numeroCartao").value.trim();
+            let validade = document.getElementById("validade").value.trim();
+            let cvv = document.getElementById("cvv").value.trim();
+
+            // Verificando se os campos estão preenchidos
+            if (nome === "" || numeroCartao === "" || validade === "" || cvv === "") {
+                alert("Por favor, preencha todos os campos para continuar.");
+            } else {
+                // Redireciona para a página de confirmação em uma nova aba
+                window.location.href = "obrigado.html";
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
