@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/javascript/styles/styles.css">
+    <link rel="stylesheet" href="src/javascript/styles/header.css">
+    <link rel="stylesheet" href="src/javascript/styles/home.css">
+    <link rel="stylesheet" href="src/javascript/styles/menu.css">
+    <link rel="stylesheet" href="global_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
+    <title>TechConnect</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <i id="nav_logo">TechConnect</i>
+            <ul id="nav_list">
+                <li class="nav-item active"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#sobre_evento">Quem Somos</a></li>
+                <li class="nav-item"><a href="#palestra">Evento</a></li>
+            </ul>
+            <button class="btn-default" onclick="location.href='#inscricao'">Inscreva-se</button>
+        </nav>
+    </header>
+    
+    <main id="content">
+        <section id="home">
+            <div id="cta">
+                <h1 class="title">Venha participar deste evento <span>Imperdível</span></h1>
+                <div id="cta_button">
+                    <a href="#inscricao" class="btn-default">Inscreva-se</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="sobre_evento">
+            <div id="Sobre-nos">
+                <h1>Sobre Nós</h1>
+            </div>
+            <div id="info">
+                <div class="info_2">
+                    <h3 class="info_titulo">Quem Somos?</h3>
+                    <span class="info_descricao">A TechConnect conecta desenvolvedores, designers e entusiastas da tecnologia ao futuro digital.</span>
+                </div>
+                <div class="info_2">
+                    <h3 class="info_titulo">O Que Fazemos?</h3>
+                    <span class="info_descricao">Criamos eventos e conferências com especialistas do mercado e oferecemos treinamentos.</span>
+                </div>
+                <div class="info_2">
+                    <h3 class="info_titulo">Nossa Experiência</h3>
+                    <span class="info_descricao">Mais de 5 anos impactando mais de 50 mil participantes em eventos de tecnologia.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="inscricao">
+            <div class="inscricao-container">
+                <div class="investimento-texto">
+                    <h2>Invista no Seu Futuro no TechFuture Summit 2025 🚀</h2>
+                    <p class="descricao_invest">No TechFuture Summit 2025, você terá acesso a conteúdos exclusivos, insights valiosos e networking.</p>
+                </div>
+                
+                <h3>Tipos de Ingressos e Benefícios</h3>
+                <div class="ingressos">
+                    <div class="ingresso">
+                        <h4>Ingresso Online – R$ 99,90</h4>
+                        <ul>
+                            <li>✔️ Acesso ao evento ao vivo com transmissão em alta qualidade.</li>
+                            <li>✔️ Interação em tempo real via chat.</li>
+                            <li>✔️ Certificado de participação.</li>
+                            <li>✔️ Replay das palestras por 7 dias.</li>
+                        </ul>
+                    </div>
+                    <div class="ingresso">
+                        <h4>Ingresso Presencial – R$ 249,90</h4>
+                        <ul>
+                            <li>✔️ Experiência imersiva no Expo Center Norte – São Paulo/SP.</li>
+                            <li>✔️ Networking exclusivo.</li>
+                            <li>✔️ Coffee break e área de exposição.</li>
+                            <li>✔️ Brindes exclusivos.</li>
+                            <li>✔️ Replay das palestras por 7 dias.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="inscricao-card">
+                    <h3>Garanta sua Vaga Agora!</h3>
+                    <form id="inscriptionForm">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                        
+                        <label for="ingresso">Escolha seu ingresso:</label>
+                        <select id="ingresso" name="ingresso">
+                            <option value="">Selecione...</option>
+                            <option value="online">Online</option>
+                            <option value="presencial">Presencial</option>
+                        </select>
+                        
+                        <button type="button" class="btn-default" onclick="validarFormulario()">Inscreva-se</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>
+
