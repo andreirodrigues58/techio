@@ -1,0 +1,150 @@
+/* Global Responsivo */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Ajuste para não deixar os cards muito largos */
+.inscricao-card, .Palestrantes_2, .palestra_2 {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Ajuste do header */
+header {
+    width: 100%;
+    background-color: #4497D8;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #01010E;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #929698;
+    border-bottom: 3px solid #929698;
+}
+
+/* Ajustes específicos para index.html */
+#home {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 50px 20px;
+    justify-content: space-between;
+}
+
+#banner img {
+    max-width: 70%;
+    height: auto;
+}
+
+#cta {
+    width: 45%;
+    max-width: 600px;
+}
+
+/* 📌 Responsividade Geral */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    #banner img {
+        max-width: 95%;
+    }
+
+    #cta {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* 📌 Ajuste para Tablets */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .palestra_2, .Palestrantes_2 {
+        width: 90%;
+    }
+
+    .ingressos {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* 📌 Ajuste para Celulares */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    input, select, button {
+        font-size: 0.9rem;
+    }
+
+    #banner img {
+        max-width: 100%;
+    }
+
+    .palestra_2, .Palestrantes_2 {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .inscricao-card {
+        max-width: 320px;
+    }
+}
+
+/* Para rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
